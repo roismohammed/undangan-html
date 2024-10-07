@@ -96,7 +96,7 @@
       </header>
 
     <div id="atas" class="bg-slate-50 lg:h-screen w-full">
-        <!-- page pertama -->
+       <!-- page pertama -->
       <div class="flex flex-col md:flex-row p-4 lg:p-16 gap-6">
         <!-- Main content area -->
         <div class="w-full md:w-8/12">
@@ -416,20 +416,19 @@
 
     </div>
 
+    <!-- icon whatsapp and scroll up -->
     <div>
-        <span onClick={scrollToTop}>
-            <div class="over:cursor-pointer text-white fixed bottom-24 right-7 rounded-full p-1 transition-opacity duration-500 " style=" background: #6C4E31">
-
+        <span onClick={scrollUp}>
+            <div class="hover:cursor-pointer text-white fixed bottom-24 right-7 rounded-full p-1 transition-opacity duration-500" style="background: #6C4E31">
                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-arrow-up">
                     <path stroke="none" d="M0 0h24v24H0z" fill="none" />
                     <path d="M12 5l0 14" />
                     <path d="M18 11l-6 -6" />
                     <path d="M6 11l6 -6" />
-                  </svg>
-
-               
+                </svg>
             </div>
         </span>
+        
         {/* style={{ background: "#6C4E31" }} */}
         <a href="https://wa.me/085940466426">
             <div class="transition-opacity duration-500 opacity-100' : 'transition-opacity text-white duration-800 flex items-center animate-pulse gap-2 fixed bottom-8 right-7 z-50 px-4 py-2 rounded-full hover:cursor-pointer" style=" background: #6C4E31">
@@ -444,13 +443,12 @@
     </div>
     <script>
 
-function scrollToTop() {
+function scrollUp() {
     const atas = document.getElementById('atas');
     if (atas) {
-      atas.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        atas.scrollIntoView({ behavior: 'smooth', block: 'start' });
     }
   }
-
 
           function handleScrollToTemplate() {
     const template = document.getElementById('template');
@@ -461,19 +459,16 @@ function scrollToTop() {
 
       let isOpen = false;
 
-      // Function to toggle the menu
       const menuButton = document.getElementById('menu-button');
   const mobileMenu = document.getElementById('mobile-menu');
   const closeMenuButton = document.getElementById('close-menu');
 
-  // Toggle mobile menu visibility
   menuButton.addEventListener('click', () => {
     mobileMenu.classList.toggle('opacity-100');
     mobileMenu.classList.toggle('translate-x-0');
     mobileMenu.classList.toggle('-translate-x-full');
   });
 
-  // Close mobile menu
   closeMenuButton.addEventListener('click', () => {
     mobileMenu.classList.remove('opacity-100');
     mobileMenu.classList.remove('translate-x-0');
