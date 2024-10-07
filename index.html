@@ -27,138 +27,75 @@
   <body>
     <!-- header -->
     <header style="background: #efc3af">
-      <nav
-        class="mx-auto flex items-center justify-between p-6 py-4"
-        aria-label="Global"
-      >
-        <div class="flex lg:flex-1">
-          <a href="#" class="-m-1.5 p-1.5">
-            <p class="text-xl">Viding</p>
-          </a>
-        </div>
-        <div class="flex lg:hidden">
-          <button
-            type="button"
-            class="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-gray-700"
-          >
-            <span class="sr-only">Open main menu</span>
-            <svg
-              class="h-6 w-6"
-              fill="none"
-              viewBox="0 0 24 24"
-              stroke-width="1.5"
-              stroke="currentColor"
-              aria-hidden="true"
-            >
-              <path
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"
-              />
-            </svg>
-          </button>
-        </div>
-        <div class="hidden lg:flex lg:gap-x-12">
-          <a href="#" class="text-md leading-6 text-white">Home</a>
-          <a href="#" class="text-md leading-6 text-gray-900">Features</a>
-          <a href="#" class="text-md leading-6 text-gray-900">Marketplace</a>
-          <a href="#" class="text-md leading-6 text-gray-900">Company</a>
-        </div>
-        <div class="hidden lg:flex lg:flex-1 lg:justify-end gap-2">
-          <a
-            href="#"
-            class="text-sm font-semibold leading-6 rounded-full px-4 py-2 bg-white"
-            style="color: #6c4e31"
-            >Masuk</a
-          >
-          <a
-            href="#"
-            class="text-sm font-semibold leading-6 text-white rounded-full px-4 py-2"
-            style="background: #6c4e31"
-            >Get Started</a
-          >
-        </div>
-      </nav>
-
-      <div
-        class="lg:hidden fixed inset-0 z-10 transition-all duration-300 ease-in-out opacity-0 -translate-x-full"
-        role="dialog"
-        aria-modal="true"
-        style="background: #efc3af"
-      >
-        <div class="fixed inset-0 z-10"></div>
-        <div
-          class="fixed inset-y-0 right-0 z-10 w-full overflow-y-auto px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10"
-        >
-          <div class="flex items-center justify-between">
+        <nav class="mx-auto flex items-center justify-between p-6 py-4" aria-label="Global">
+          <div class="flex lg:flex-1">
             <a href="#" class="-m-1.5 p-1.5">
               <p class="text-xl">Viding</p>
             </a>
-            <button type="button" class="-m-2.5 rounded-md p-2.5 text-gray-700">
-              <span class="sr-only">Close menu</span>
-              <svg
-                class="h-6 w-6"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke-width="1.5"
-                stroke="currentColor"
-                aria-hidden="true"
-              >
-                <path
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  d="M6 18L18 6M6 6l12 12"
-                />
+          </div>
+          <div class="flex lg:hidden">
+            <button
+              type="button"
+              class="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-gray-700"
+              id="menu-button"
+            >
+              <span class="sr-only">Open main menu</span>
+              <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
               </svg>
             </button>
           </div>
-          <div class="mt-6 flow-root">
-            <div class="-my-6 divide-y divide-gray-500/10">
-              <div class="space-y-2 py-6">
-                <a
-                  href="#"
-                  class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
-                  >Home</a
-                >
-                <a
-                  href="#"
-                  class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
-                  >Features</a
-                >
-                <a href="#" class="-mx-3 block rounded-lg pxHere is the
-                continuation of the HTML version of your code: ```html
-                <a
-                  href="#"
-                  class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
-                  >Marketplace</a
-                >
-                <a
-                  href="#"
-                  class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
-                  >Company</a
-                >
-              </div>
-              <div class="py-6 flex gap-2">
-                <a
-                  href="#"
-                  class="text-sm font-semibold leading-6 rounded-full px-4 py-2 bg-white"
-                  style="color: #6c4e31"
-                  >Masuk</a
-                >
-                <a
-                  href="#"
-                  class="text-sm font-semibold leading-6 text-white rounded-full px-4 py-2"
-                  style="background: #6c4e31"
-                  >Get Started</a
-                >
+          <div class="hidden lg:flex lg:gap-x-12">
+            <a href="#" class="text-md leading-6 text-white">Home</a>
+            <a href="#" class="text-md leading-6 text-gray-900">Features</a>
+            <a href="#" class="text-md leading-6 text-gray-900">Marketplace</a>
+            <a href="#" class="text-md leading-6 text-gray-900">Company</a>
+          </div>
+          <div class="hidden lg:flex lg:flex-1 lg:justify-end gap-2">
+            <a href="#" class="text-sm font-semibold leading-6 rounded-full px-4 py-2 bg-white" style="color: #6c4e31">Masuk</a>
+            <a href="#" class="text-sm font-semibold leading-6 text-white rounded-full px-4 py-2" style="background: #6c4e31">Get Started</a>
+          </div>
+        </nav>
+      
+        <div
+          id="mobile-menu"
+          class="lg:hidden fixed inset-0 z-10 transition-all duration-300 ease-in-out opacity-0 -translate-x-full"
+          role="dialog"
+          aria-modal="true"
+          style="background: #efc3af"
+        >
+          <div class="fixed inset-0 z-10"></div>
+          <div class="fixed inset-y-0 right-0 z-10 w-full overflow-y-auto px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10">
+            <div class="flex items-center justify-between">
+              <a href="#" class="-m-1.5 p-1.5">
+                <p class="text-xl">Viding</p>
+              </a>
+              <button type="button" class="-m-2.5 rounded-md p-2.5 text-gray-700" id="close-menu">
+                <span class="sr-only">Close menu</span>
+                <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+                </svg>
+              </button>
+            </div>
+            <div class="mt-6 flow-root">
+              <div class="-my-6 divide-y divide-gray-500/10">
+                <div class="space-y-2 py-6">
+                  <a href="#" class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50">Home</a>
+                  <a href="#" class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50">Features</a>
+                  <a href="#" class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50">Marketplace</a>
+                  <a href="#" class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50">Company</a>
+                </div>
+                <div class="py-6 flex gap-2">
+                  <a href="#" class="text-sm font-semibold leading-6 rounded-full px-4 py-2 bg-white" style="color: #6c4e31">Masuk</a>
+                  <a href="#" class="text-sm font-semibold leading-6 text-white rounded-full px-4 py-2" style="background: #6c4e31">Get Started</a>
+                </div>
               </div>
             </div>
           </div>
         </div>
-      </div>
-    </header>
+      </header>
 
-    <div class="bg-slate-50 lg:h-screen w-full">
+    <div id="atas" class="bg-slate-50 lg:h-screen w-full">
         <!-- page pertama -->
       <div class="flex flex-col md:flex-row p-4 lg:p-16 gap-6">
         <!-- Main content area -->
@@ -177,6 +114,7 @@
               Temukan keindahan desain undangan pernikahan impianmu.
             </p>
             <button
+            onclick="handleScrollToTemplate()"
               class="rounded-full mt-4 md:mt-24 text-white flex gap-2 px-4 py-2"
               style="background: #6c4e31"
             >
@@ -349,7 +287,7 @@
     </div>
 
     <!-- card product -->
-    <div class="md:p-16 p-4 mt-8">
+    <div id="template" class="md:p-16 p-4 mt-8">
         <!-- select Input -->
       <div class="flex flex-col md:flex-row justify-between gap-4 md:gap-6">
         <div class="flex flex-col md:flex-row gap-4 w-full md:w-auto">
@@ -477,39 +415,69 @@
      
 
     </div>
+
+    <div>
+        <span onClick={scrollToTop}>
+            <div class="over:cursor-pointer text-white fixed bottom-24 right-7 rounded-full p-1 transition-opacity duration-500 " style=" background: #6C4E31">
+
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-arrow-up">
+                    <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                    <path d="M12 5l0 14" />
+                    <path d="M18 11l-6 -6" />
+                    <path d="M6 11l6 -6" />
+                  </svg>
+
+               
+            </div>
+        </span>
+        {/* style={{ background: "#6C4E31" }} */}
+        <a href="https://wa.me/085940466426">
+            <div class="transition-opacity duration-500 opacity-100' : 'transition-opacity text-white duration-800 flex items-center animate-pulse gap-2 fixed bottom-8 right-7 z-50 px-4 py-2 rounded-full hover:cursor-pointer" style=" background: #6C4E31">
+                <svg xmlns="http://www.w3.org/2000/svg" width="44" height="44" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-brand-whatsapp">
+                    <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                    <path d="M3 21l1.65 -3.8a9 9 0 1 1 3.4 2.9l-5.05 .9" />
+                    <path d="M9 10a.5 .5 0 0 0 1 0v-1a.5 .5 0 0 0 -1 0v1a5 5 0 0 0 5 5h1a.5 .5 0 0 0 0 -1h-1a.5 .5 0 0 0 0 1" />
+                  </svg>
+                <p>Chat</p>
+            </div>
+        </a>
+    </div>
     <script>
- const swiper = new Swiper('.swiper-container', {
-      loop: true, // Enable continuous loop mode
-      pagination: {
-        el: '.swiper-pagination',
-        clickable: true, // Allow pagination to be clickable
-      },
-      navigation: {
-        nextEl: '.swiper-button-next',
-        prevEl: '.swiper-button-prev',
-      },
-      autoplay: {
-        delay: 2500, // Delay between slides in milliseconds
-        disableOnInteraction: false, // Continue autoplay after interaction
-      },
-    });
+
+function scrollToTop() {
+    const atas = document.getElementById('atas');
+    if (atas) {
+      atas.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+  }
+
+
+          function handleScrollToTemplate() {
+    const template = document.getElementById('template');
+    if (template) {
+      template.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+  }
 
       let isOpen = false;
 
       // Function to toggle the menu
-      function toggleMenu() {
-        isOpen = !isOpen; // Toggle state
-        const menu = document.getElementById("mobile-menu"); // Get the mobile menu element
+      const menuButton = document.getElementById('menu-button');
+  const mobileMenu = document.getElementById('mobile-menu');
+  const closeMenuButton = document.getElementById('close-menu');
 
-        // Apply appropriate classes based on the state
-        if (isOpen) {
-          menu.classList.remove("opacity-0", "-translate-x-full"); // Make menu visible
-          menu.classList.add("opacity-100", "translate-x-0");
-        } else {
-          menu.classList.remove("opacity-100", "translate-x-0"); // Hide menu
-          menu.classList.add("opacity-0", "-translate-x-full");
-        }
-      }
-    </script>
+  // Toggle mobile menu visibility
+  menuButton.addEventListener('click', () => {
+    mobileMenu.classList.toggle('opacity-100');
+    mobileMenu.classList.toggle('translate-x-0');
+    mobileMenu.classList.toggle('-translate-x-full');
+  });
+
+  // Close mobile menu
+  closeMenuButton.addEventListener('click', () => {
+    mobileMenu.classList.remove('opacity-100');
+    mobileMenu.classList.remove('translate-x-0');
+    mobileMenu.classList.add('-translate-x-full');
+  });    </script>
   </body>
 </html>
