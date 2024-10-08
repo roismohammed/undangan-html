@@ -27,6 +27,7 @@
      rel="stylesheet"
      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
    />
+   <link rel="stylesheet" href="./style.css">
   </head>
   <body>
     <!-- header -->
@@ -109,7 +110,7 @@
             style="background: #efc3af"
           >
             <p
-              class="text-4xl md:text-6xl font-bold"
+              class="text-4xl font-1 md:text-6xl font-bold"
               style="color: #6c4e31; max-width: 500px"
             >
               Template Design Undangan
@@ -391,7 +392,7 @@
     </div>
 
     <!-- footer -->
-    <div style=" background: #EFC3AF;">
+    <div style=" background: #EFC3AF;" >
  
         <div class='grid grid-cols-1 md:grid-cols-2 p-8 md:p-16'>
             <div class='flex flex-col h-full'>
@@ -415,14 +416,11 @@
                 </div>
             </div>
         </div>
-
-     
-
     </div>
 
     <!-- icon whatsapp and scroll up -->
     <div>
-        <button onClick={scrollUp}>
+        <button onClick=scrollUp()>
             <div class="hover:cursor-pointer text-white fixed bottom-24 right-7 rounded-full p-1 transition-opacity duration-500" style="background: #6C4E31">
                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-arrow-up">
                     <path stroke="none" d="M0 0h24v24H0z" fill="none" />
@@ -432,52 +430,75 @@
                 </svg>
             </div>
         </button>
-        
-        {/* style={{ background: "#6C4E31" }} */}
-        <a href="https://wa.me/085940466426">
-            <div class="transition-opacity duration-500 opacity-100' : 'transition-opacity text-white duration-800 flex items-center animate-pulse gap-2 fixed bottom-8 right-7 z-50 px-4 py-2 rounded-full hover:cursor-pointer" style=" background: #6C4E31">
-                <svg xmlns="http://www.w3.org/2000/svg" width="44" height="44" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-brand-whatsapp">
-                    <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-                    <path d="M3 21l1.65 -3.8a9 9 0 1 1 3.4 2.9l-5.05 .9" />
-                    <path d="M9 10a.5 .5 0 0 0 1 0v-1a.5 .5 0 0 0 -1 0v1a5 5 0 0 0 5 5h1a.5 .5 0 0 0 0 -1h-1a.5 .5 0 0 0 0 1" />
-                  </svg>
-                <p>Chat</p>
-            </div>
-        </a>
+
+
+        <a href="https://wa.me/085940466426" class="transition-all duration-300 ease-in-out opacity-100">
+          <div class="text-white flex items-center animate-pulse gap-2 fixed bottom-8 right-7 z-50 px-4 py-2 rounded-full hover:cursor-pointer" style="background: #6C4E31">
+              <svg xmlns="http://www.w3.org/2000/svg" width="44" height="44" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-brand-whatsapp">
+                  <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                  <path d="M3 21l1.65 -3.8a9 9 0 1 1 3.4 2.9l-5.05 .9" />
+                  <path d="M9 10a.5 .5 0 0 0 1 0v-1a.5 .5 0 0 0 -1 0v1a5 5 0 0 0 5 5h1a.5 .5 0 0 0 0 -1h-1a.5 .5 0 0 0 0 1" />
+              </svg>
+              <p>Chat</p>
+          </div>
+      </a>
+
+
     </div>
     <script>
 
+// Existing scroll functions
 function scrollUp() {
     const atas = document.getElementById('atas');
     if (atas) {
-        atas
-        .scrollIntoView({ behavior: 'smooth', block: 'start' });
+        atas.scrollIntoView({ behavior: 'smooth', block: 'start' });
     }
-  }
+}
 
-          function handleScrollToTemplate() {
+function handleScrollToTemplate() {
     const template = document.getElementById('template');
     if (template) {
-      template.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        template.scrollIntoView({ behavior: 'smooth', block: 'start' });
     }
-  }
+}
 
-      let isOpen = false;
+// Mobile menu functionality
+let isOpen = false;
+const menuButton = document.getElementById('menu-button');
+const mobileMenu = document.getElementById('mobile-menu');
+const closeMenuButton = document.getElementById('close-menu');
 
-      const menuButton = document.getElementById('menu-button');
-  const mobileMenu = document.getElementById('mobile-menu');
-  const closeMenuButton = document.getElementById('close-menu');
-
-  menuButton.addEventListener('click', () => {
+menuButton.addEventListener('click', () => {
     mobileMenu.classList.toggle('opacity-100');
     mobileMenu.classList.toggle('translate-x-0');
     mobileMenu.classList.toggle('-translate-x-full');
-  });
+});
 
-  closeMenuButton.addEventListener('click', () => {
+closeMenuButton.addEventListener('click', () => {
     mobileMenu.classList.remove('opacity-100');
     mobileMenu.classList.remove('translate-x-0');
     mobileMenu.classList.add('-translate-x-full');
-  });    </script>
+});
+
+// New scroll-based visibility functionality
+let lastScrollTop = 0;
+const whatsappLink = document.querySelector('a[href*="wa.me"]');
+
+window.addEventListener('scroll', function() {
+    let currentScroll = window.pageYOffset || document.documentElement.scrollTop;
+    
+    if (currentScroll > lastScrollTop) {
+        // Scrolling down
+        whatsappLink.classList.remove('opacity-100');
+        whatsappLink.classList.add('opacity-0', 'pointer-events-none');
+    } else {
+        // Scrolling up
+        whatsappLink.classList.remove('opacity-0', 'pointer-events-none');
+        whatsappLink.classList.add('opacity-100');
+    }
+    
+    lastScrollTop = currentScroll <= 0 ? 0 : currentScroll;
+}, false);
+</script>
   </body>
 </html>
