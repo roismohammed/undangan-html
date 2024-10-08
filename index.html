@@ -441,17 +441,17 @@
 
     <!-- icon whatsapp and scroll up -->
     <div>
-        <button onClick=scrollUp()>
-            <div class="hover:cursor-pointer text-white fixed bottom-24 right-7 rounded-full p-1 transition-opacity duration-500" style="background: #6C4E31">
-                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-arrow-up">
-                    <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-                    <path d="M12 5l0 14" />
-                    <path d="M18 11l-6 -6" />
-                    <path d="M6 11l6 -6" />
-                </svg>
-            </div>
-        </button>
-
+      <button onClick="scrollUp()" id="scrollUpButton" style="opacity: 0;">
+        <div class="hover:cursor-pointer scrollUp text-white fixed bottom-24 right-7 rounded-full p-1 transition-opacity duration-500" style="background: #6C4E31">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-arrow-up">
+                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                <path d="M12 5l0 14" />
+                <path d="M18 11l-6 -6" />
+                <path d="M6 11l6 -6" />
+            </svg>
+        </div>
+    </button>
+    
 
         <a href="https://wa.me/085940466426" class="transition-all duration-300 ease-in-out opacity-100">
           <div class="text-white flex items-center animate-pulse gap-2 fixed bottom-8 right-7 z-50 px-4 py-2 rounded-full hover:cursor-pointer" style="background: #6C4E31">
@@ -469,12 +469,25 @@
     <script>
 
 
+const scrollUpButton = document.querySelector('[onClick="scrollUp"]');
+
 function scrollUp() {
     const atas = document.getElementById('atas');
     if (atas) {
         atas.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    } else {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
     }
 }
+
+window.addEventListener('scroll', function () {
+    const scrollUpButton = document.getElementById('scrollUpButton');
+    if (window.scrollY > 200) {
+        scrollUpButton.style.opacity = '1';
+    } else {
+        scrollUpButton.style.opacity = '0';
+    }
+});
 
 function handleScrollToTemplate() {
     const template = document.getElementById('template');
