@@ -23,11 +23,15 @@
         }
       }
     </style>
+     <link
+     rel="stylesheet"
+     href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+   />
   </head>
   <body>
     <!-- header -->
-    <header style="background: #efc3af">
-        <nav class="mx-auto flex items-center justify-between p-6 py-4" aria-label="Global">
+    <header style="background: #efc3af" class="z-20">
+        <nav class="mx-auto z-10 flex items-center justify-between p-6 py-4" aria-label="Global">
           <div class="flex lg:flex-1">
             <a href="#" class="-m-1.5 p-1.5">
               <p class="text-xl">Viding</p>
@@ -99,9 +103,9 @@
        <!-- page pertama -->
       <div class="flex flex-col md:flex-row p-4 lg:p-16 gap-6">
         <!-- Main content area -->
-        <div class="w-full md:w-8/12">
+        <div class="w-full md:w-8/12 ">
           <div
-            class="rounded-xl border shadow-none p-4 md:p-10"
+            class="rounded-xl border shadow-none p-4 md:p-10 animate__animated animate__fadeInDown"
             style="background: #efc3af"
           >
             <p
@@ -140,7 +144,7 @@
           </div>
 
           <div class="flex flex-col md:flex-row lg:flex-row gap-6 mt-6">
-            <div class="w-full md:w-6/12">
+            <div class="w-full md:w-6/12 animate__animated animate__fadeInUp">
               <div
                 class="rounded-xl shadow-none p-4 md:p-10"
                 style="background: #efc3af"
@@ -185,7 +189,7 @@
                 </div>
               </div>
             </div>
-            <div class="w-full md:w-6/12">
+            <div class="w-full md:w-6/12 animate__animated animate__fadeInUp">
               <div
                 class="rounded-xl shadow-none p-4 md:p-10"
                 style="background: #efc3af"
@@ -234,7 +238,7 @@
         </div>
 
         <!-- Carousel section -->
-        <div class="w-full md:w-4/12">
+        <div class="w-full md:w-4/12 animate__animated animate__slideInUp">
           <div
             class="rounded-xl border p-2 h-[540px] flex flex-col justify-between items-center"
             style="background: #efc3af"
@@ -418,7 +422,7 @@
 
     <!-- icon whatsapp and scroll up -->
     <div>
-        <span onClick={scrollUp}>
+        <button onClick={scrollUp}>
             <div class="hover:cursor-pointer text-white fixed bottom-24 right-7 rounded-full p-1 transition-opacity duration-500" style="background: #6C4E31">
                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-arrow-up">
                     <path stroke="none" d="M0 0h24v24H0z" fill="none" />
@@ -427,7 +431,7 @@
                     <path d="M6 11l6 -6" />
                 </svg>
             </div>
-        </span>
+        </button>
         
         {/* style={{ background: "#6C4E31" }} */}
         <a href="https://wa.me/085940466426">
@@ -446,7 +450,8 @@
 function scrollUp() {
     const atas = document.getElementById('atas');
     if (atas) {
-        atas.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        atas
+        .scrollIntoView({ behavior: 'smooth', block: 'start' });
     }
   }
 
